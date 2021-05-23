@@ -25,11 +25,11 @@ let fontInc = 0;
 function cycleFontFamily(a) {
     const titleIQ = document.getElementById(a);
     fFamily = ['Impact', '\"Permanent Marker\"', '\'Arial Black\'', 'sans-serif'];
-    gFamily = ['url(./images/coffeeHouse.gif)', 'url(./images/waterFall.gif)', 'url(./images/blahblah_v2.gif)'];
+    gFamily = ['url(./images/coffeeHouse.gif)', 'url(./images/waterFall.gif)', 'url(./images/blahblah_v2.gif)', 'url(./images/load-1.gif)', 'url(./images/gif-3.gif)'];
     titleIQ.style.fontFamily = fFamily[ fontInc++ ];
     titleIQ.style.fontStyle = 'italic';
     //titleIQ.style.backgroundColor = 'khaki';
-    titleIQ.style.backgroundImage = gFamily[ Math.floor( Math.random()*3 ) ];
+    titleIQ.style.backgroundImage = gFamily[ Math.floor( Math.random()*5 ) ];
     titleIQ.style.backgroundRepeat = 'no-repeat';
     titleIQ.style.backgroundSize = "cover";
     titleIQ.style.backgroundPosition = "center";
