@@ -1,0 +1,39 @@
+#Home-Content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: bisque;
+}
+
+#Main-Content {
+    padding: 0 2em;
+    flex-grow: 4;
+
+    background-color: cadetblue;
+}
+
+#Side-Content {
+    flex-grow: 1;
+    min-width: 200px;
+
+    background-color: crimson;
+}
+
+/*
+    Test Class used primarily to see how
+    the browser and certain components react
+    to particular design and layout changes
+*/
+
+.Test {
+    background-color: blueviolet;
+    height: 1200px;
+}
+
+@media (max-width: 700px) {
+    #Side-Content {
+        display: none;
+    }
+}
