@@ -28,6 +28,6 @@ mongoose.connect(db,
     });
 
 // = API Endpoints ===
-app.get('/getDocument/:docId', docHandler.getDocument);
+app.get('/getDocument/:docID', docHandler.getDocument);
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
