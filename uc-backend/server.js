@@ -6,13 +6,14 @@ const mongoose  = require('mongoose');
 const path      = require('path');
 
 // = Request Handlers ===
-const TestHandler   = require('');
+const docHandler   = require('./handlers/docHandler');
 
 // = Set up Server ===
 const app  = express();
 const port = 8080;
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
@@ -23,9 +24,10 @@ mongoose.connect(db,
     err => {
         if(err)
             throw err;
-        console.log("Connect to MongoDB");
+        console.log("Connected to MongoDB");
     });
 
 // = API Endpoints ===
+app.get('/getDocument/:docId', docHandler.getDocument);
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));
