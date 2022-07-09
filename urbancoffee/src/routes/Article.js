@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { NavBar, Document } from '../components'
+import { NavBar, Document, PostComment, Comment, SearchBar} from '../components'
 
 const Article = () => {
     const { docID } = useParams();
@@ -25,12 +25,14 @@ const Article = () => {
         <>
         <NavBar/>
         <div className='Container' id='Article'>
-            Article
+            <SearchBar/>
             {
                 Object.keys(docJSON).length? // check if docJSON is non-empty
                     <Document doc={docJSON}/>:
                     <></>
             }
+            <PostComment docID={docID}/>
+            <Comment />
         </div>
         </>
     )
