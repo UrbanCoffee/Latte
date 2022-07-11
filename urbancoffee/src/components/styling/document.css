@@ -1,3 +1,53 @@
-.Document {
+/*.Document {
     background-color: cadetblue;
+}*/
+
+/* .Doc-Text-Container {
+    margin-left: 4%;
+    margin-right: 4%;
+    max-width: 1100px;
+} */
+
+.Document h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+.Document h2 {
+    font-weight: 500;
+    margin: 0 0 1em 0;
+}
+
+
+/* Author Styling */
+
+.Doc-Author {
+    display: flex;
+    align-items: center;
+}
+
+.Doc-Author h3 {
+    font-weight: 500;
+    margin: 5px;
+}
+
+/* Document Text Body */
+.Doc-Body {
+    margin-bottom: 2em;
+    border-bottom: 3px solid lightgrey;
+} 
+
+.Doc-Body p {
+    text-align: justify;
+}
+
+.Doc-Body img {
+    width: 80%;
+}
+
+/* Document Time */
+.Doc-Body-Time p{
+    margin-top: 2em;
+    color:dimgray;
+    text-align: center;
 }

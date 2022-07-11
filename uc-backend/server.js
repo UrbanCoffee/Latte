@@ -6,7 +6,8 @@ const mongoose  = require('mongoose');
 const path      = require('path');
 
 // = Request Handlers ===
-const docHandler   = require('./handlers/docHandler');
+const docHandler    = require('./handlers/docHandler');
+const comHandler    = require('./handlers/comHandler');
 
 // = Set up Server ===
 const app  = express();
@@ -29,5 +30,6 @@ mongoose.connect(db,
 
 // = API Endpoints ===
 app.get('/getDocument/:docID', docHandler.getDocument);
+app.get('/getComment/:comID', comHandler.getComment );
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));

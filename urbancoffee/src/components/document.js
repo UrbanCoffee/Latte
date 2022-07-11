@@ -1,4 +1,5 @@
 import './styling/document.css'
+import Userpfp from './userpfp'
 
 function render( obj , index ){
     switch(obj['type']) {
@@ -20,26 +21,28 @@ const Document = ({ doc }) => {
 
     return (
         <div className='Document'>
-            <div className='Doc-Banner'>
-                <img alt='banner' src='#'/>
-            </div>
-            <h1>{doc.title}</h1>
-            <h3>{doc.subtitle}</h3>
-            <div className='Doc-Author'>
-                <img className='userpfp pfp-small' alt='user pfp' src='#'/>
-                <h3>by {doc.author}</h3>
-            </div>
 
-            <div className='Doc-Body'>
-                {doc.body.map( (sect, index) => {
-                    console.log(sect);
-                    return render(sect, index);
-                })}
-                <div className="Doc-Body-Time">
-                    <p>{doc.timePosted}</p>
+                <h1>{doc.title}</h1>
+                <h2>{doc.subtitle}</h2>
+
+                <div className='Doc-Author'>
+                    <Userpfp styleType="small"/>
+                    <h3>by {doc.author}</h3>
                 </div>
-            </div>
-            
+
+                <div className='Doc-Body'>
+                    {doc.body.map( (sect, index) => {
+                        return render(sect, index);
+                    })}
+                    <div className="Doc-Body-Time">
+                        <p>{doc.timePosted}</p>
+                    </div>
+                </div>
+
+                <div className='Doc-Adendums'>
+                    {/* Adendums */}
+                </div>
+
         </div>
     )
 }

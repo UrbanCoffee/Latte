@@ -1,0 +1,14 @@
+.Doc-Banner {
+    position: relative;
+    height: 15em;
+    width: 100%;
+    background-color: darkslategrey;
+    /*background: url('') center;
+    background-size: cover;*/
+}
+
+.Doc-Banner img {
+    width: 100%;
+    height: 100%;
+
+}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { NavBar, Document, PostComment, Comment, SearchBar} from '../components'
+import './styling/Article.css'
+import { NavBar, Document, DocBanner,
+         PostComment, Comment, SearchBar} from '../components'
 
 const Article = () => {
     const { docID } = useParams();
@@ -26,13 +28,21 @@ const Article = () => {
         <NavBar/>
         <div className='Container' id='Article'>
             <SearchBar/>
-            {
-                Object.keys(docJSON).length? // check if docJSON is non-empty
-                    <Document doc={docJSON}/>:
-                    <></>
-            }
-            <PostComment docID={docID}/>
-            <Comment />
+            <DocBanner docID={docID}/>
+            <div className="Article-Left-Body">
+                {
+                    Object.keys(docJSON).length? // check if docJSON is non-empty
+                        <Document doc={docJSON}/>:
+                        <></>
+                }
+                <div className='CommentSection'>
+                    <PostComment docID={docID} styleType="span"/>
+                    <Comment />
+                </div>
+            </div>
+            {/*<div className="Article-Right-Body">
+                <p>Test</p>
+            </div>*/}
         </div>
         </>
     )
