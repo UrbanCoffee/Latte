@@ -4,5 +4,21 @@
     width: 5em;
     height: 100%;
     color: white;
-    background-color: black;
+    background-color: #076A95;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.NavBar-Placeholder {
+    aspect-ratio: 1;
+    margin: 20%;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.NavBar-Placeholder:hover {
+    background-color: rgb(194, 224, 255);
 }

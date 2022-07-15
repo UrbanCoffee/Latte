@@ -1,0 +1,8 @@
+.SearchBar {
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    
+    background: rgba(0,0,0,.50);
+}

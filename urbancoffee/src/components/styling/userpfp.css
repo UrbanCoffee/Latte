@@ -1,0 +1,14 @@
+.userpfp {
+    border-radius: 30% 0 0 0;
+    background: black url('#') center;
+}
+
+.small {
+    width: 2em;
+    height: 2em;
+}
+
+.large {
+    width: 5em;
+    height: 5em;
+}
