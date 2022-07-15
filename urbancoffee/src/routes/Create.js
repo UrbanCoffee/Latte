@@ -13,7 +13,10 @@ const Create = () => {
     const updSubTtl = input => setSubtitle(input.target.value);
     // Have updBody here in the mean time before a proper
     // parse function can be implemented in <inputTEXTAREA/>
-    const updBody   = value => {console.log(value);};
+    const updBody   = value => {
+        setBody([value]);
+        console.log(docBody);
+    };
 
     return (
         <>
@@ -21,7 +24,8 @@ const Create = () => {
         <div className='Container' id='Create'>
             <header>
                 {/* Fix when screen is small and title is too long */}
-                <div><span>Create a document - </span> 
+                <div>
+                    <span>Create a document - </span> 
                     {docTitle.length? docTitle : "Untitled"}
                 </div>
                 <button 
@@ -46,6 +50,7 @@ const Create = () => {
                     <input type='text' placeholder='Subtitle'
                         id='subtitle'
                         name='subtitle'
+                        maxLength={'100'}
                         onInput={updSubTtl}
                         /><br/>
 
@@ -54,8 +59,8 @@ const Create = () => {
                 </form>
 
                 <div id='Preview'>
-                    <div className='DocPH'>
-                        <DocBanner/>
+                    <div className='DocPreview'>
+                        {/*<DocBanner/>
                         <Document
                             doc={{
                                 title: docTitle,
@@ -63,7 +68,10 @@ const Create = () => {
                                 author: "Placeholder",
                                 body: docBody
                             }}
-                            />
+                        />*/}
+                        <p> {docTitle? docTitle : "Untitled"} </p>
+                        <p> {docSubtitle? docSubtitle : "UnSubtitled"} </p>
+                        <p> {docBody.length? docBody : "Empty Body"} </p>
                     </div>
                 </div>
             </div>

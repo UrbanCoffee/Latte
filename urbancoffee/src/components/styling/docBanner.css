@@ -1,6 +1,7 @@
 .Doc-Banner {
     position: relative;
-    height: 15em;
+    /*height: 15em;*/
+    aspect-ratio: 7;
     width: 100%;
     background-color: darkslategrey;
     /*background: url('') center;
