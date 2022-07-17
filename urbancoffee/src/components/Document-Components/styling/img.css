@@ -1,0 +1,13 @@
+.Doc-Image p, .Doc-Image {
+    text-align: center;
+}
+
+.Doc-Image p {
+    margin-top: 0;
+    opacity: 80%;
+    font-weight: 200;
+}
+
+.Doc-Image img {
+    max-width: 80%;
+}

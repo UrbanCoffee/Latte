@@ -1,3 +1,12 @@
+/*
+    p [
+        0: "<...text...>",
+        1: "<...more text...>",
+        ... Elements are grouped in the same <p></p> tags but seprated by <br/>
+        n: "<...more text...>"
+    ]
+*/
+
 const Paragraph = ({ contents }) => {
     // if contents is empty then nothing is displayed.
     // else if contents is not an array, then reduce would not work.

@@ -7,6 +7,7 @@ const path      = require('path');
 
 // = Request Handlers ===
 const docHandler    = require('./handlers/docHandler');
+const imgHandler    = require('./handlers/imgHandler');
 const comHandler    = require('./handlers/comHandler');
 
 // = Set up Server ===
@@ -30,6 +31,7 @@ mongoose.connect(db,
 
 // = API Endpoints ===
 app.get('/getDocument/:docID', docHandler.getDocument);
+app.get('/getDocImages/:docID/:image', imgHandler.getDocImage);
 app.get('/getComment/:comID', comHandler.getComment );
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`));

@@ -41,10 +41,6 @@
     text-align: justify;
 }
 
-.Doc-Body img {
-    width: 80%;
-}
-
 /* Document Time */
 .Doc-Body-Time p{
     margin-top: 2em;
